@@ -1,0 +1,43 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GraphicsShapesLib", "GraphicsShapesLib\GraphicsShapesLib.vcxproj", "{963C3AAD-FBEC-323B-A0C9-CE615EA40050}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GraphicsRoiLib", "GraphicsRoiLib\GraphicsRoiLib.vcxproj", "{8D037D23-4F65-38BA-8EDC-D0F058096863}"
+	ProjectSection(ProjectDependencies) = postProject
+		{963C3AAD-FBEC-323B-A0C9-CE615EA40050} = {963C3AAD-FBEC-323B-A0C9-CE615EA40050}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GraphicsRoiExample", "GraphicsRoiExample\GraphicsRoiExample.vcxproj", "{064F7654-8D05-32F7-ACC0-A799A72A57E3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{963C3AAD-FBEC-323B-A0C9-CE615EA40050} = {963C3AAD-FBEC-323B-A0C9-CE615EA40050}
+		{8D037D23-4F65-38BA-8EDC-D0F058096863} = {8D037D23-4F65-38BA-8EDC-D0F058096863}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{963C3AAD-FBEC-323B-A0C9-CE615EA40050}.Debug|x64.ActiveCfg = Debug|x64
+		{963C3AAD-FBEC-323B-A0C9-CE615EA40050}.Debug|x64.Build.0 = Debug|x64
+		{963C3AAD-FBEC-323B-A0C9-CE615EA40050}.Release|x64.ActiveCfg = Release|x64
+		{963C3AAD-FBEC-323B-A0C9-CE615EA40050}.Release|x64.Build.0 = Release|x64
+		{8D037D23-4F65-38BA-8EDC-D0F058096863}.Debug|x64.ActiveCfg = Debug|x64
+		{8D037D23-4F65-38BA-8EDC-D0F058096863}.Debug|x64.Build.0 = Debug|x64
+		{8D037D23-4F65-38BA-8EDC-D0F058096863}.Release|x64.ActiveCfg = Release|x64
+		{8D037D23-4F65-38BA-8EDC-D0F058096863}.Release|x64.Build.0 = Release|x64
+		{064F7654-8D05-32F7-ACC0-A799A72A57E3}.Debug|x64.ActiveCfg = Debug|x64
+		{064F7654-8D05-32F7-ACC0-A799A72A57E3}.Debug|x64.Build.0 = Debug|x64
+		{064F7654-8D05-32F7-ACC0-A799A72A57E3}.Release|x64.ActiveCfg = Release|x64
+		{064F7654-8D05-32F7-ACC0-A799A72A57E3}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		Qt5Version = msvc2015_64
+	EndGlobalSection
+EndGlobal

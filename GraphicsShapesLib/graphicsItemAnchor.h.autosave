@@ -1,0 +1,43 @@
+﻿#ifndef GRAPHICSITEMANCHOR_H
+#define GRAPHICSITEMANCHOR_H
+
+#include "graphicsshapeslib_global.h"
+#include "graphicsItemRect.h"
+
+class GraphicsItemAnchorPrivate;
+class GRAPHICSSHAPESLIBSHARED_EXPORT GraphicsItemAnchor : public GraphicsItemRect
+{
+    Q_OBJECT
+    Q_INTERFACES(QGraphicsItem)
+public:
+    // Anchor图形：矩形/圆/十字
+    enum ShapeStyle
+    {
+        ShapeRectangle,
+        ShapeCircle,
+    };
+    Q_ENUM(ShapeStyle)
+protected:
+    GraphicsItemAnchor(GraphicsItemAnchorPrivate &dd, QGraphicsObject *parent);
+public:
+    explicit GraphicsItemAnchor(QGraphicsObject *parent = Q_NULLPTR);
+    explicit GraphicsItemAnchor(const QPointF& point, const QSizeF& size, QGraphicsObject *parent = Q_NULLPTR);
+    ~GraphicsItemAnchor();
+
+    inline void setAnchor(const QPointF& point, const QSizeF& size);
+
+    QPointF anchorPosition();
+    QSizeF anchorSize();
+    void setShapeStyle(ShapeStyle style);
+
+    enum { Type = UserType + ShapeAnchor };
+    virtual int type() const Q_DECL_OVERRIDE;
+
+protected:
+    void init();
+private:
+    Q_DISABLE_COPY(GraphicsItemAnchor)
+    Q_DECLARE_PRIVATE_D(QGraphicsItem::d_ptr.data(), GraphicsItemAnchor)
+};
+
+#endif // GRAPHICSITEMANCHOR_H
